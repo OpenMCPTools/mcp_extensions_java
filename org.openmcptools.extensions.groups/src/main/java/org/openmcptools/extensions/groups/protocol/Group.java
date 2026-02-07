@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class GroupPE {
+public class Group {
 	
 	@JsonProperty("name")
 	public String name;
@@ -18,25 +18,25 @@ public class GroupPE {
 	@JsonProperty("description")
 	public String description;
 	@JsonProperty("parent")
-	public GroupPE parent;
+	public Group parent;
 	@JsonProperty("_meta")
 	public Map<String, Object> meta;
 	
-	public GroupPE(String name) {
+	public Group(String name) {
 		Objects.requireNonNull("name", "Group name must not be null");
 		// Other construction checks eventually...e.g. no cycles
 		this.name = name;
 	}
 	
-	private String getToolGroupName(StringBuffer sb, GroupPE tg, String separator) {
+	private String getToolGroupName(StringBuffer sb, Group tg, String separator) {
 		if (tg.parent != null) {
 			return new StringBuffer(getToolGroupName(sb, parent, separator)).append(separator).append(tg.name).toString();
 		}
 		return tg.name;
 	}
 
-	public String getFullyQualifiedName(String separator) {
-		return getToolGroupName(new StringBuffer(), this, separator);
+	public String getFullyQualifiedName(String nameSeparator) {
+		return getToolGroupName(new StringBuffer(), this, nameSeparator);
 	}
 
 }
