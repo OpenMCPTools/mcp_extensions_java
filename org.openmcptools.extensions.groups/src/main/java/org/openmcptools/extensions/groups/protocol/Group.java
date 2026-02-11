@@ -28,15 +28,14 @@ public class Group {
 		this.name = name;
 	}
 	
-	private String getToolGroupName(StringBuffer sb, Group tg, String separator) {
-		if (tg.parent != null) {
-			return new StringBuffer(getToolGroupName(sb, parent, separator)).append(separator).append(tg.name).toString();
-		}
-		return tg.name;
+	private String getGroupName(StringBuffer sb, Group tg, String separator) {
+		return (tg.parent != null)
+				? new StringBuffer(getGroupName(sb, parent, separator)).append(separator).append(tg.name).toString()
+				: tg.name;
 	}
 
 	public String getFullyQualifiedName(String nameSeparator) {
-		return getToolGroupName(new StringBuffer(), this, nameSeparator);
+		return getGroupName(new StringBuffer(), this, nameSeparator);
 	}
 
 }
