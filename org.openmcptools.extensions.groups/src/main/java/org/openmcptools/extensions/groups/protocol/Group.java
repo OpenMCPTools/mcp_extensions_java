@@ -28,6 +28,19 @@ public class Group {
 		this.name = name;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public static Group convertMapToGroup(Map<String, Object> groupMap) {
+		org.openmcptools.extensions.groups.protocol.Group result = new org.openmcptools.extensions.groups.protocol.Group((String) groupMap.get("name"));
+		result.title = (String) groupMap.get("title");
+		result.description = (String) groupMap.get("description");
+		Map<String, Object> parentMap = (Map<String, Object>) groupMap.get("parent");
+		if (parentMap != null) {
+			result.parent = convertMapToGroup(parentMap);
+		}
+		result.meta = (Map<String,Object>) groupMap.get("_meta");
+		return result;
+	}
+	
 	private String getGroupName(StringBuffer sb, Group tg, String separator) {
 		return (tg.parent != null)
 				? new StringBuffer(getGroupName(sb, parent, separator)).append(separator).append(tg.name).toString()
