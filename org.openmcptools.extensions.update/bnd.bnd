@@ -1,1 +1,4 @@
--buildpath: com.fasterxml.jackson.core.jackson-annotations
+-buildpath: \
+	com.fasterxml.jackson.core.jackson-annotations,\
+	org.osgi.annotation.versioning,\
+	org.osgi.annotation.bundle

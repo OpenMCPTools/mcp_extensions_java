@@ -18,15 +18,15 @@ public class FieldValueUpdate {
 	public Object fieldValue;
 	
 	@JsonProperty("createRevision")
-	long createRevision;
+	public long createRevision;
 	
 	@JsonProperty("modRevision")
-	long modRevision;
+	public long modRevision;
 	
 	@JsonProperty("version")
-	long version;
+	public long version;
 	
 	@JsonProperty("lease")
-	long lease;
+	public long lease;
 	
 }
