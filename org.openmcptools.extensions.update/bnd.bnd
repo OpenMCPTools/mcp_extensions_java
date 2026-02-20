@@ -2,3 +2,6 @@
 	com.fasterxml.jackson.core.jackson-annotations,\
 	org.osgi.annotation.versioning,\
 	org.osgi.annotation.bundle
+	
+	Bundle-Version:             1.0.1.${tstamp}
+	
