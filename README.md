@@ -3,7 +3,7 @@ A repository of MCP Extensions for Java
 
 ## Group Extension
 
-The [org.openmcptools.extensions.groups](https://github.com/OpenMCPTools/mcp_extensions_typescript/tree/main/org.openmcptools.extensions.groups) module provides an MCP extension to support hierarchical server-side grouping. 
+The [org.openmcptools.extensions.groups](https://github.com/OpenMCPTools/mcp_extensions_java/blob/main/org.openmcptools.extensions.groups) module provides an MCP extension to support hierarchical server-side grouping. 
 
 ### What's in here
 
@@ -56,6 +56,8 @@ If you are using an extension and would like to be added to this list, please op
 
 ## Update Extension
 
-This extension defines a small set classes to represent incremental updates for MCP primitives.  
+The [org.openmcptools.extensions.update](https://github.com/OpenMCPTools/mcp_extensions_java/blob/main/org.openmcptools.extensions.update) project provides an extension to support incremental updates via server->client notifications. The notifications include data of what was updated.
+
+
 
 
