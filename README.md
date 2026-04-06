@@ -48,15 +48,9 @@ This schema for hierarchical grouping was [initially proposed as a MCP protocol 
 
 The same schema is used for the [mcp_extensions_java group extension](https://github.com/OpenMCPTools/mcp_extensions_java/tree/main/org.openmcptools.extensions.groups) (Java SDK) and the [mcp_extensions_python group extension](https://github.com/OpenMCPTools/mcp_extensions_python/tree/main/org.openmcptools.extensions.groups) (Python SDK)
 
-### Known Projects Using Extension 
+## MCP Primitive Dynamic Update Extension
 
-If you are using an extension and would like to be added to this list, please open a pr.
-
-[MCPToolGroups](https://github.com/ECF/MCPToolGroups)
-
-## Update Extension
-
-The [org.openmcptools.extensions.update](https://github.com/OpenMCPTools/mcp_extensions_java/blob/main/org.openmcptools.extensions.update) project provides an extension to support incremental updates via server->client notifications. The notifications include data of what was updated.
+The [org.openmcptools.extensions.update](https://github.com/OpenMCPTools/mcp_extensions_java/blob/main/org.openmcptools.extensions.update) project provides an extension to support incremental server updates of MCP tool metadata via server->client(s) json 2.0 notifications. The notifications include a server-defined diff of what was updated.
 
 
 
