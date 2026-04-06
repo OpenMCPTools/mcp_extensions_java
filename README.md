@@ -1,9 +1,9 @@
 # mcp_extensions_java
 A repository of MCP Extensions for Java
 
-## Group Extension
+## ToolGroup Extension
 
-The [org.openmcptools.extensions.groups](https://github.com/OpenMCPTools/mcp_extensions_java/blob/main/org.openmcptools.extensions.groups) module provides an MCP extension to support hierarchical server-side grouping. 
+The [org.openmcptools.extensions.groups](https://github.com/OpenMCPTools/mcp_extensions_java/blob/main/org.openmcptools.extensions.groups) module provides an MCP extension to support hierarchical server-side tool grouping. 
 
 ### What's in here
 
