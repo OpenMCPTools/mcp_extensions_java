@@ -1,4 +1,4 @@
-# MCP Server Dynamic Updates
+# Server Dynamic Updates
 
 This project provides a MCP server extension for MCP servers to dynamically deliver updates of MCP primitives (e.g. tools), 
 via json rpc 2.0 notifications.  Json 2.0 rcp notifications are already a part of the MCP protocol and so this extension simply defines a
